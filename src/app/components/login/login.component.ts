@@ -2,6 +2,7 @@ import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -11,24 +12,27 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoginComponent {
 
   form: FormGroup
+  loading = false;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar){
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required],
     })
   }
-  ngOnInit(): void{
+  ngOnInit(): void {
   }
 
-  ingresar(){
+  ingresar() {
     const usuario = this.form.value.usuario;
     const password = this.form.value.password;
 
-    if( usuario === 'fpascual' && password === 'admin123') {
+    if (usuario === 'fpascual' && password === 'admin123') {
+      this.fakeLoading()
       // redirect to dashboard
     } else {
       this.error();
+      this.form.reset();
     }
   }
 
@@ -38,5 +42,15 @@ export class LoginComponent {
       horizontalPosition: 'center',
       verticalPosition: 'bottom'
     })
+  }
+
+  fakeLoading() {
+    this.loading = true;
+    console.log(this.loading)
+    setTimeout(() => {
+      this.loading = false
+      console.log(this.loading)
+
+    }, 1500)
   }
 }
