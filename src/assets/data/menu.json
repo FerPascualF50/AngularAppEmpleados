@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Dashboard",
+    "redirect": "/dashboard",
+    "icon": "dashboard",
+    "disabled": "false"
+  },
+  {
+    "nombre": "Usuarios",
+    "redirect": "/dashboard/usuarios",
+    "icon": "person",
+    "disabled": "false"
+  },
+  {
+    "nombre": "Reportes",
+    "redirect": "/dashboard/reportes",
+    "icon": "folder",
+    "disabled": "true"
+  }
+]

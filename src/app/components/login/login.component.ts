@@ -2,6 +2,7 @@ import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { timeout } from 'rxjs';
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginComponent {
   form: FormGroup
   loading = false;
 
-  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       password: ['', Validators.required],
@@ -46,11 +47,8 @@ export class LoginComponent {
 
   fakeLoading() {
     this.loading = true;
-    console.log(this.loading)
     setTimeout(() => {
-      this.loading = false
-      console.log(this.loading)
-
-    }, 1500)
+      this.router.navigate(['dashboard']);
+    }, 1000)
   }
 }
