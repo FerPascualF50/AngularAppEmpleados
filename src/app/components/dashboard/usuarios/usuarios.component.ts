@@ -1,18 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/interfaces/usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
-
-
-const listUsuario: Usuario[] = [
-  {usuario: "fpascual", nombre: 'Fernando', apellido: 'Pascual', sexo: 'Masculino'},
-  {usuario: "lhamilton", nombre: 'Luis', apellido: 'Hamilton', sexo: 'Masculino'},
-  {usuario: "izanazi", nombre: 'Ianina', apellido: 'Zanazi', sexo: 'Femenino'},
-  {usuario: "falonso", nombre: 'Fernando', apellido: 'Alonso', sexo: 'Masculino'},
-  {usuario: "mverstapen", nombre: 'Max', apellido: 'Verstapen', sexo: 'Masculino'},
-  {usuario: "anpascual", nombre: 'Ana', apellido: 'Pascual', sexo: 'Femenino'},
-  
-
-];
 
 @Component({
   selector: 'app-usuarios',
@@ -20,9 +12,33 @@ const listUsuario: Usuario[] = [
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  ngOnInit(): void {
-  }
+ 
+  listUsuarios: Usuario[] = [];
+  
   displayedColumns: string[] = ['usuario', 'nombre', 'apellido', 'sexo', 'acciones'];
-  dataSource = listUsuario;
+  dataSource!: MatTableDataSource<any>;
 
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+  
+  constructor(private _usuarioServce: UsuarioService){}
+
+  ngOnInit(): void {
+    this.cargarUsuarios();
+  }
+
+  cargarUsuarios(){
+    this.listUsuarios = this._usuarioServce.getUsuario();
+    this.dataSource = new MatTableDataSource(this.listUsuarios)
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }
