@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Acerca de:
 AppEmpleador es una aplicacion web pensada en administrar por ejemplo 'una nomina de empleados'. Esta formada por un Frontend que simula un Backend con una Mock Data para emular un CRUD, (esta version cuanta con crear y eliminar usuarios/empleados) mediante services e interfaces.
 
-Cuenta con un `Login` con formularios controlados; una tabla con `paginacion`, `ordenamiendo` y `filtrado`, y eliminacion de registros (con alertas); botones de navbar dinamicos, formulario controlado para creacion de registros, entre otras funcionalidades.
+Cuenta con un `Login` con formularios controlados; una tabla con `paginacion`, `ordenamiendo` y `filtrado`, y eliminacion de registros (con alertas); botones de navbar dinamicos; formulario controlado para creacion de registros; rutas lazy loading y protegidas, entre otras funcionalidades.
 
 Para ingresar el unico usuario: `fpascual` y password `admin123`
 
