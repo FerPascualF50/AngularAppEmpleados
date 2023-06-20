@@ -11,9 +11,9 @@ Para ingresar el unico usuario: `fpascual` y password `admin123`
 
 `Tecnologias` : 
 
-// Angular v16.1.0
+ [Angular v16.1.0]
 
-// angular Material v16.1.1
+ [Angular Material v16.1.1]
 
 
 ## 1- Ejecutar `npm install`
