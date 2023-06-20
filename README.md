@@ -34,7 +34,7 @@ password `admin123`
 
 ## Version desplegada
 
-https://angular-empleados-six.vercel.app/login
+https://angular-empleados-six.vercel.app
 
 
 # AngularAppEmpleados
