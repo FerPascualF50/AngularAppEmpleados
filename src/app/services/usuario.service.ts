@@ -12,7 +12,13 @@ export class UsuarioService {
     { usuario: "izanazi", nombre: 'Ianina', apellido: 'Zanazi', sexo: 'Femenino' },
     { usuario: "falonso", nombre: 'Fernando', apellido: 'Alonso', sexo: 'Masculino' },
     { usuario: "mverstapen", nombre: 'Max', apellido: 'Verstapen', sexo: 'Masculino' },
-    { usuario: "anpascual", nombre: 'Ana', apellido: 'Pascual', sexo: 'Femenino' },
+    { usuario: "linhamilton", nombre: 'Linda', apellido: 'Hamilton', sexo: 'Femenino' },
+    { usuario: "jconnor", nombre: 'Jhon', apellido: 'Connor', sexo: 'Masculino' },
+    { usuario: "t800", nombre: 'Terminator', apellido: 'Desconocido', sexo: 'Otro' },
+    { usuario: "aschwarzenegger", nombre: 'Arnold', apellido: 'Schwarzeneggers', sexo: 'Masculino' },
+    { usuario: "rpatrick", nombre: 'Robert', apellido: 'Patrick', sexo: 'Masculino' },
+    { usuario: "t1000", nombre: 'Terminator', apellido: 'Desconocido', sexo: 'Otro' },
+    { usuario: "adearmas", nombre: 'Anna', apellido: 'DeArmas', sexo: 'Femenino' },
   ];
 
   constructor() { }
@@ -23,5 +29,9 @@ export class UsuarioService {
 
   eliminarUsuario(index: number) {
     this.listUsuarios.splice(index, 1);
+  }
+
+  agregarUsuario(usuario: Usuario){
+    this.listUsuarios.unshift(usuario);
   }
 }

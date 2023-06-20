@@ -22,3 +22,7 @@ td, th {
   margin-top: 5px;
   height: 70px;
 }
+
+.example-spacer {
+  flex: 1 1 auto;
+}

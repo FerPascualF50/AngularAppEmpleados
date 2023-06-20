@@ -3,7 +3,7 @@
     "nombre": "Dashboard",
     "redirect": "/dashboard",
     "icon": "dashboard",
-    "disabled": "false"
+    "disabled": "true"
   },
   {
     "nombre": "Usuarios",
