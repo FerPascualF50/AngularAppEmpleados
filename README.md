@@ -2,27 +2,39 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-## Development server
+## Acerca de:
+AppEmpleador es una aplicacion web pensada en administrar por ejemplo 'una nomina de empleados'. Esta formada por un Frontend que simula un Backend con una Mock Data para emular un CRUD, (esta version cuanta con crear y eliminar usuarios/empleados) mediante services e interfaces.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Cuenta con un `Login` con formularios controlados; una tabla con `paginacion`, `ordenamiendo` y `filtrado`, y eliminacion de registros (con alertas); botones de navbar dinamicos, formulario controlado para creacion de registros, entre otras funcionalidades.
 
-## Code scaffolding
+Para ingresar el unico usuario: `fpascual` y password `admin123`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`Tecnologias` : 
 
-## Build
+// Angular v16.1.0
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+// angular Material v16.1.1
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 1- Ejecutar `npm install`
 
-## Running end-to-end tests
+Luego de descargar el repositorio ejecutar en consolar `npm install`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 2- Development server
 
-## Further help
+Ejecutar `ng serve` para el servidor de desarrollo y abrir navigador con URL `http://localhost:4200/`. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# AngunarAppEmpleados
+O bien ejecutar `ng serve --o` para abrir el navegador automagicamentte.
+
+## 3- Login
+
+usuario: `fpascual`
+
+password `admin123`
+
+## Version desplegada
+
+https://angular-empleados-six.vercel.app/login
+
+
+# AngularAppEmpleados
