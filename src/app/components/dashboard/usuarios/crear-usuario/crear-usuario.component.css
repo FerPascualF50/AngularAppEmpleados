@@ -1,11 +1,20 @@
-.container{
+.container {
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 5px;
 }
 
+.picture{
+  height: 50%;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
 .ancho {
-width: 90%;
-display: flex;
-align-items: center;
+  width: 100%;
 }
