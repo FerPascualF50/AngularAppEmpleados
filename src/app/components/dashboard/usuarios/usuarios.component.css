@@ -1,19 +1,64 @@
-.container {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 5px;
+.example-container {
+  position: relative;
+
+}
+
+.example-table-container {
+  position: relative;
+  min-height: 200px;
+  max-height: 360px;
+  overflow: auto;
 }
 
 table {
   width: 100%;
 }
 
-td, th {
-  width: 20%;
+.example-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pointer{
+.example-rate-limit-reached {
+  max-width: 360px;
+  text-align: center;
+}
+
+.mat-column-number,
+.mat-column-state {
+  max-width: 64px;
+}
+
+.mat-column-created {
+  max-width: 124px;
+}
+
+
+.pointer {
   cursor: pointer;
+}
+
+.container {
+  margin-top: 5px;
+}
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* .container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 5px;
 }
 
 .mat-mdc-form-field {
@@ -23,6 +68,16 @@ td, th {
   height: 70px;
 }
 
-.example-spacer {
-  flex: 1 1 auto;
+table {
+  display: flex;
+  flex-direction: column;
 }
+
+td,
+th {
+  width: 20%;
+}
+
+.pointer {
+  cursor: pointer;
+} */
